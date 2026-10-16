@@ -1,0 +1,46 @@
+/* Lucian UX/UI Prompt theme integration · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/ */
+:root,:root[data-theme="light"],:root[data-theme="dark"]{--ux-page:var(--paper);--ux-surface:var(--panel);--ux-surface-2:var(--code-bg);--ux-surface-3:var(--hover);--ux-ink:var(--ink);--ux-ink-2:var(--ink-2);--ux-ink-3:var(--ink-3);--ux-line:var(--line);--ux-line-2:color-mix(in srgb,var(--ink) 17%,transparent);--ux-accent:var(--skin);--ux-accent-2:var(--sky-ink);--ux-accent-soft:var(--skin-soft);--ux-accent-ink:var(--panel);--ux-mint:var(--skin);--ux-warn:var(--gold);--ux-danger:#c43b52;--ux-glass:var(--panel);--ux-glass-line:var(--line);--ux-shadow:color-mix(in srgb,var(--ink) 14%,transparent);--ux-shadow-strong:color-mix(in srgb,var(--ink) 30%,transparent);--ux-grad:linear-gradient(120deg,var(--skin),var(--sky-ink));--ux-ease:cubic-bezier(.2,.8,.2,1);--ux-spring:cubic-bezier(.34,1.45,.64,1)}
+.ux,.ux *,.ux *::before,.ux *::after{box-sizing:border-box}
+.ux{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",Roboto,"Noto Sans KR",sans-serif;
+  color:var(--ux-ink);-webkit-font-smoothing:antialiased;letter-spacing:-.01em;
+  -webkit-tap-highlight-color:transparent;
+  word-break:keep-all;overflow-wrap:break-word;
+}
+
+:where(.ux) :is(button,input,textarea,select){font:inherit;color:inherit}
+:where(.ux) button{cursor:pointer}
+.ux :focus-visible{outline:2px solid var(--ux-accent);outline-offset:3px}
+.ux [hidden]{display:none!important}
+
+@media (prefers-reduced-motion:reduce){
+  .ux,.ux *,.ux *::before,.ux *::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important;
+  }
+}
+
+.ux{font-family:var(--f-body);word-break:normal}
+.lucian-command{align-self:center;min-width:0}
+.hero-layout{grid-template-columns:minmax(0,1fr) 340px}
+.lucian-command .guide-title{margin:0 0 -12px 12px}
+.u008{max-width:100%}
+.u008-tab{font-family:var(--f-body)}
+.u008-code{background:transparent;padding:0;border-radius:0}
+.u008-box{max-width:calc(100% - 24px)}
+.u008.is-error .u008-tip{opacity:1;transform:none}
+.intro-grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:32px;align-items:start}
+.u044{max-width:100%}
+.u044-a p{line-height:1.85}
+.u044-a a{display:inline;font:inherit;text-decoration:underline;line-height:inherit}
+.accordion-slot{min-height:400px}
+.mobile-toc{align-items:flex-start;justify-content:flex-end;padding:22px 20px;overflow:auto}
+.mobile-toc.open{display:flex}
+.u286{max-width:100%;flex:none}
+.u286-ft span{font-size:11px}
+.u286-vw .u286-ls{overflow:auto;scrollbar-width:thin}
+:root[data-reduced-motion=true]{scroll-behavior:auto}
+:root[data-reduced-motion=true] *,:root[data-reduced-motion=true] *::before,:root[data-reduced-motion=true] *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0ms!important;scroll-behavior:auto!important}
+@media(max-width:1190px){.hero-layout{grid-template-columns:minmax(0,1fr) 340px}.intro-grid{grid-template-columns:minmax(0,1fr)}.accordion-slot{width:350px;max-width:100%}}
+@media(max-width:760px){.hero-layout{display:block}.lucian-command{margin-top:20px}.report-intro>.lucian-command{margin:22px 0}}
+@media(max-width:600px){.intro-grid{gap:22px}}
